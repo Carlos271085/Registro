@@ -27,6 +27,7 @@ document.getElementById('registerForm').onsubmit = function (e) {
         registerForm.reset();
     } else {
         regMsg.textContent = "El correo ya está registrado.";
+        registerForm.reset(); // Limpia los campos del formulario de registro si este ya se encuentra registrado
     }
 };
 

@@ -9,6 +9,7 @@
 
 <body>
     <h2 id="mensaje"></h2>
+    <button id="logoutBtn">Cerrar sesión</button>
     <script>
         const nombre = localStorage.getItem('loggedUser');
         if (nombre) {
@@ -16,6 +17,11 @@
         } else {
             mensaje.textContent = "No hay usuario logueado.";
         }
+
+        document.getElementById('logoutBtn').onclick = function () {
+            localStorage.removeItem('loggedUser');
+            window.location.href = "index.html";
+        };
     </script>
 </body>
 
