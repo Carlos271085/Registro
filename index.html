@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Login</title>
+</head>
+
+<body>
+    <h2>Registro</h2>
+    <form id="registerForm">
+        <input type="text" id="regName" placeholder="Nombre" required><br>
+        <input type="email" id="regEmail" placeholder="Correo" required><br>
+        <input type="password" id="regPass" placeholder="Contraseña" required><br>
+        <button type="submit">Registrarse</button>
+        <p id="regMsg"></p>
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Correo" required><br>
+        <input type="password" id="loginPass" placeholder="Contraseña" required><br>
+        <button type="submit">Iniciar sesión</button>
+        <p id="loginMsg"></p>
+    </form>
+
+    <div id="welcome"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

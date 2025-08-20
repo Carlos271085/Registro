@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <h2 id="mensaje"></h2>
+    <script>
+        const nombre = localStorage.getItem('loggedUser');
+        if (nombre) {
+            mensaje.textContent = `Inicio de sesión exitoso. Bienvenido, ${nombre}!`;
+        } else {
+            mensaje.textContent = "No hay usuario logueado.";
+        }
+    </script>
+</body>
+
+</html>
