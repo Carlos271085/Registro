@@ -44,5 +44,6 @@ document.getElementById('loginForm').onsubmit = function (e) {
     } else {
         loginMsg.textContent = "Correo o contraseña incorrectos.";
         welcome.textContent = "";
+        loginForm.reset(); // Limpia los campos si los datos son incorrectos
     }
 };
