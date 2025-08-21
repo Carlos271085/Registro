@@ -1,11 +1,11 @@
 // Guardar usuario en localStorage
-function saveUser(name, email, pass) {
+function saveUser(nombre, email, pass) {
     let users = JSON.parse(localStorage.getItem('users') || '[]');
     // Validar si el correo ya existe
     if (users.some(u => u.email === email)) {
         return false;
     }
-    users.push({ name, email, pass });
+    users.push({ nombre, email, pass });
     localStorage.setItem('users', JSON.stringify(users));
     return true;
 }
@@ -19,10 +19,10 @@ function findUser(email, pass) {
 // Registro
 document.getElementById('registerForm').onsubmit = function (e) {
     e.preventDefault();
-    const name = regName.value.trim();
+    const nombre = nombreRegistro.value.trim();
     const email = regEmail.value.trim();
     const pass = regPass.value;
-    if (saveUser(name, email, pass)) {
+    if (saveUser(nombre, email, pass)) {
         regMsg.textContent = "Registro exitoso.";
         registerForm.reset();
     } else {
