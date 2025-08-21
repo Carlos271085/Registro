@@ -11,7 +11,7 @@
     <h2 id="mensaje"></h2>
     <button id="logoutBtn">Cerrar sesión</button>
     <script>
-        const nombre = localStorage.getItem('loggedUser');
+        let nombre = localStorage.getItem('loggedUser');
         if (nombre) {
             mensaje.textContent = `Inicio de sesión exitoso. Bienvenido, ${nombre}!`;
         } else {
